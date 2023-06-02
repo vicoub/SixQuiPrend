@@ -72,7 +72,7 @@ public class AppJeu extends Application {
     }
 
     private void choisirCarte(Joueur joueur) {
-        verrou = new CountDownLatch(1);
+        verrou = new CountDownLatch(5);
         Platform.runLater(() -> {
             Dialog<Carte> dialog = new Dialog<>();
             dialog.setTitle("Choisissez une carte");
