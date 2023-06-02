@@ -43,6 +43,7 @@ public class AppJeu extends Application {
 
         Scene scene = new Scene(racine, 800, 600);
         primaryStage.setScene(scene);
+        primaryStage.setTitle("BIENVENUE");
         primaryStage.setTitle("6 Qui Prend!");
         primaryStage.show();
 
@@ -62,9 +63,9 @@ public class AppJeu extends Application {
                 Joueur gagnant = jeu.determinerGagnant();
                 Platform.runLater(() -> {
                     Alert alerte = new Alert(Alert.AlertType.INFORMATION);
-                    alerte.setTitle("Partie Terminée !");
-                    alerte.setHeaderText("La Partie est Finie!");
-                    alerte.setContentText("Le gagnant est " + gagnant.getNom() + " avec " + gagnant.getPoints() + " points.");
+                    alerte.setTitle("Le jeu est terminé");
+                    alerte.setHeaderText("FIN DE LA PARTIE");
+                    alerte.setContentText("Le gagnant est " + gagnant.getNom() + " ,tu as " + gagnant.getPoints() + " points.");
                     alerte.showAndWait();
                 });
             }
